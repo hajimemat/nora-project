@@ -3,7 +3,7 @@ all:
 install:
 	[ -a composer.json ] && make -f make/composer.mk composer || echo 'composer.json no'
 	[ -a package.json ] && make -f make/npm.mk npm || echo 'package.json no'
-	[ -a gulp.coffee ] && make -f make/npm.mk gulp || echo 'gulp.coffee no'
+	[ -a gulpfile.coffee ] && make -f make/npm.mk gulp || echo 'gulp.coffee no'
 
 # react
 react: package.json

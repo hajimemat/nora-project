@@ -15,6 +15,7 @@ autoprefixer   = require 'gulp-autoprefixer'
 
 # PATH
 jsSrcPath  = "src/script"
+jsEntry  = "index.jsx"
 sassSrcPath  = "src/style"
 StaticPath = "build"
 jsDestPath = StaticPath+"/script"
@@ -24,7 +25,7 @@ cssDestPath = StaticPath+"/style"
 
 gulp.task 'watchify', watchify (watchify)->
   time = process.hrtime()
-  return gulp.src([jsSrcPath+'/index.js'])
+  return gulp.src([jsSrcPath+'/'+jsEntry])
     .pipe(plumber())
     .pipe(watchify(
       watch: true

@@ -1,0 +1,11 @@
+# インストール
+
+composer.jsonがあれば、composerをインストール
+package.jsonがあれば、npmをインストール
+gulp.coffeeがあれば、gulpをインストール
+
+make install
+
+## 初期処理
+
+## UI

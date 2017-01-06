@@ -1,0 +1,13 @@
+{
+    "name": "nora/project",
+    "authors": [
+        {
+            "name": "Hajime",
+            "email": "info@hajime.work"
+        }
+    ],
+    "require": {
+        "twig/twig": "~1.0"
+    }
+}
+

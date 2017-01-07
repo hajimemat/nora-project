@@ -5,6 +5,15 @@ install:
 	[ -a package.json ] && make -f make/npm.mk npm || echo 'package.json no'
 	[ -a gulpfile.coffee ] && make -f make/npm.mk gulp || echo 'gulp.coffee no'
 
+# WEBを開始する
+web: public/assets/script public/assets/style
+public/assets/script: public/assets
+	ln -sf $(realpath build/script) $@
+public/assets/style: public/assets
+	ln -sf $(realpath build/style) $@
+public/assets:
+	mkdir $@
+
 # react
 react: package.json
 	npm install --save \
